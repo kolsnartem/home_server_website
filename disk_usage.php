@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-// Функція для отримання даних про диск
+// Функція для отримання даних про диск!
 function getDiskUsage($device) {
     $output = shell_exec("df -h $device 2>&1"); // Додаємо 2>&1 для захоплення помилок
     if (empty($output)) {
