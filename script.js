@@ -276,7 +276,7 @@ function loadFiles(directory, baseUrl = '192.168.31.185') {
                         fileItem.appendChild(iconButton);
                     }
 
-                    fileItem.insertBefore(fileLink, fileItem.firstChild); // Виправлено порядок
+                    fileItem.insertBefore(fileLink, fileItem.firstChild);
                     fileList.appendChild(fileItem);
                 });
 
@@ -345,7 +345,7 @@ backButton.addEventListener('click', function() {
         loadFiles(previousDirectory, '192.168.31.185');
     } else {
         navigationStack = [];
-        fileList.innerHTML = ''; // Очищаємо список файлів
+        fileList.innerHTML = '';
         fileList.classList.remove('active');
         navButtons.classList.remove('d-none');
         backButton.classList.add('d-none');
@@ -365,3 +365,8 @@ loadFiles = function(directory, baseUrl = '192.168.31.185') {
     }
     originalLoadFiles(directory, baseUrl);
 };
+
+// Запуск анімації після завантаження сторінки
+window.addEventListener('load', function() {
+    document.getElementById('main-container').classList.add('loaded');
+});
