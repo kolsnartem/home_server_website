@@ -29,7 +29,7 @@ body {
     animation: fadeIn 0.4s ease-out forwards;
 }
 
-h1 {
+h1#home-server {
     color: #a0c0ff;
     font-weight: 700;
     font-size: clamp(1.5rem, 5vw, 3rem);
@@ -39,6 +39,7 @@ h1 {
     cursor: default;
     opacity: 0;
     animation: slideIn 0.4s ease-out 0.1s forwards;
+    margin-bottom: 3rem; /* Відступ до кнопок */
 }
 
 .btn {
@@ -185,7 +186,7 @@ h1 {
 
 #last-viewed {
     display: block;
-    margin-top: 2rem;
+    /* Прибрано margin-top: 2rem, відступ тепер лише від .nav-buttons */
 }
 
 /* Анімації */
