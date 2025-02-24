@@ -1,0 +1,174 @@
+body {
+    background: radial-gradient(circle at 50% 120%, #0a0a1a 0%, #02020f 100%);
+    color: #f5f7fa;
+    font-family: 'Space Grotesk', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #02020f;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+    background: rgba(15, 15, 30, 0.95);
+    border-radius: 12px;
+    border: 1px solid rgba(75, 85, 120, 0.3);
+    box-shadow: 0 0 20px rgba(50, 60, 90, 0.3);
+    padding: clamp(1rem, 3vw, 2rem);
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #a0c0ff;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px rgba(160, 192, 255, 0.3);
+    cursor: default;
+}
+
+.btn {
+    background: linear-gradient(135deg, #4051b5 0%, #6b7dff 100%);
+    color: white;
+    border: 1px solid rgba(107, 125, 255, 0.4);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(107, 125, 255, 0.3);
+    color: white;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.file-item {
+    background: rgba(25, 25, 40, 0.8);
+    border-radius: 8px;
+    border: 1px solid rgba(75, 85, 120, 0.2);
+    backdrop-filter: blur(8px);
+    transition: all 0.4s ease;
+}
+
+.file-item:hover {
+    background: rgba(35, 35, 50, 0.8);
+    transform: translateX(5px) scale(1.02);
+    box-shadow: 0 3px 10px rgba(75, 85, 120, 0.2);
+}
+
+.file-item a {
+    color: #f5f7fa;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.file-item a:hover {
+    color: #a0c0ff;
+    text-shadow: 0 0 5px rgba(160, 192, 255, 0.5);
+}
+
+.file-item .text-muted {
+    color: #8899b3 !important;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.icon-button {
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.icon-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.1);
+}
+
+.icon-button img {
+    width: 0.9rem;
+    height: 0.9rem;
+    object-fit: contain;
+    filter: brightness(0.9);
+}
+
+#no-files-message, #no-history-message {
+    color: #8899b3;
+    font-style: italic;
+}
+
+/* Стилі для кнопки "Назад" */
+#back-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Стилі для секції Last Viewed */
+.last-viewed-title {
+    color: #a0c0ff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 10px rgba(160, 192, 255, 0.3);
+    text-align: left;
+}
+
+#last-viewed {
+    display: block;
+    margin-top: 2rem;
+}
+
+/* Стилі для iPhone */
+.iphone .container {
+    border-radius: 0;
+    padding: clamp(0.5rem, 2vw, 1rem);
+    min-height: 100vh;
+}
+
+.iphone-body {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* Стилі для мобільних */
+.mobile .container {
+    padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+/* Стилі для десктопу */
+.desktop .container {
+    max-width: 800px;
+}

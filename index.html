@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Media Server</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap">
+</head>
+<body>
+    <div class="container d-flex flex-column" id="main-container">
+        <h1 id="home-server" class="text-center mb-4">Home Server</h1>
+
+        <div class="nav-buttons row g-3 mb-5" id="navButtons">
+            <div class="col"><button id="tv-button" class="btn w-100">Local</button></div>
+            <div class="col"><button id="movies-button" class="btn w-100">HDD</button></div>
+            <div class="col"><button id="history-button" class="btn w-100">History</button></div>
+        </div>
+
+        <div id="last-viewed" class="d-none">
+            <h2 class="last-viewed-title mb-3">Last Viewed</h2>
+            <div id="last-viewed-list"></div>
+            <p id="no-history-message" class="text-center">No recent files</p>
+        </div>
+
+        <div id="file-list-container" class="flex-grow-1">
+            <button id="back-button" class="btn mb-3 d-none">Back</button>
+            <div id="file-list" class="content-section">
+                <p id="no-files-message" class="text-center">Select a folder to view files</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Підключення зовнішніх бібліотек -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Підключення власного скрипта -->
+    <script src="script.js"></script>
+</body>
+</html>
