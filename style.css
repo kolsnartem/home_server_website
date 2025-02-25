@@ -1,7 +1,7 @@
 body {
     background: radial-gradient(circle at 50% 120%, #0a0a1a 0%, #02020f 100%);
     color: #f5f7fa;
-    font-family: 'Space Grotesk', 'Arial', sans-serif;
+    font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
